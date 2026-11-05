@@ -4,15 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#11130f">
-  <meta name="description" content="Portafolio de Marta Nubia Galindo Guzmán: perfil, desarrollo de software y proyectos web.">
+  <meta name="description" content="Marta Nubia Galindo Guzmán puede ayudarte a crear páginas web, aplicaciones móviles, videojuegos y otras soluciones digitales.">
+  <meta property="og:title" content="Marta Nubia Galindo Guzmán — Soluciones digitales">
+  <meta property="og:description" content="Hagamos realidad tu idea digital: páginas web, aplicaciones móviles y videojuegos.">
+  <meta property="og:type" content="website">
   <link rel="canonical" href="https://martanubiadevs.com/">
-  <title>Marta Nubia Galindo Guzmán — Desarrollo web</title>
+  <title>Marta Nubia Galindo Guzmán — Soluciones digitales</title>
   <style>
     :root {
       color-scheme: dark;
       --bg: #11130f;
       --surface: #191c16;
-      --surface-2: #20241c;
+      --surface-raised: #20241c;
       --ink: #f2f0e8;
       --muted: #a7aa9d;
       --line: rgba(242,240,232,.15);
@@ -28,130 +31,104 @@
     a { color: inherit; }
     .shell { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
     .topbar { height: 78px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
-    .nameplate { font-size: 12px; font-weight: 650; letter-spacing: .02em; text-decoration: none; }
-    .nameplate .name-accent { color: var(--lime); }
+    .nameplate { font-size: 12px; font-weight: 700; letter-spacing: .025em; text-decoration: none; }
+    .nameplate .slash { color: var(--lime); }
     .nav { display: flex; gap: 30px; align-items: center; }
     .nav a { color: var(--muted); font-size: 12px; text-decoration: none; transition: color .2s; }
     .nav a:hover { color: var(--lime); }
     .nav .nav-cta { border: 1px solid var(--line); border-radius: 99px; padding: 9px 14px; color: var(--ink); }
-    .hero { min-height: 680px; display: grid; grid-template-columns: 1.06fr .94fr; gap: 48px; align-items: center; padding-block: 76px 90px; }
-    .eyebrow { color: var(--lime); font: 10px var(--mono); letter-spacing: .16em; text-transform: uppercase; display: flex; gap: 10px; align-items: center; }
-    .eyebrow i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 15px #fa805477; }
-    h1 { font: 400 clamp(55px, 7.2vw, 91px)/.94 var(--serif); letter-spacing: -.065em; margin: 27px 0 24px; }
+    .hero { min-height: 650px; display: grid; grid-template-columns: 1.08fr .92fr; gap: 54px; align-items: center; padding-block: 75px 85px; }
+    .eyebrow { color: var(--lime); font: 10px var(--mono); letter-spacing: .15em; text-transform: uppercase; display: flex; gap: 10px; align-items: center; }
+    .eyebrow-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+    h1 { font: 400 clamp(52px, 6.7vw, 84px)/.98 var(--serif); letter-spacing: -.065em; margin: 27px 0 24px; }
     h1 .accent { color: var(--lime); font-style: italic; }
-    .hero-copy { max-width: 490px; color: var(--muted); font-size: 15px; line-height: 1.85; }
-    .hero-actions { display: flex; align-items: center; gap: 13px; margin-top: 30px; flex-wrap: wrap; }
-    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 0 18px; border-radius: 3px; background: var(--lime); border: 1px solid var(--lime); color: #15170f; text-decoration: none; font-size: 12px; font-weight: 750; cursor: pointer; transition: transform .2s, background .2s; }
+    .hero-copy { max-width: 500px; color: var(--muted); font-size: 15px; line-height: 1.85; }
+    .hero-copy strong { color: var(--ink); font-weight: 650; }
+    .hero-actions { display: flex; align-items: center; gap: 12px; margin-top: 30px; flex-wrap: wrap; }
+    .button { min-height: 46px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 0 18px; border-radius: 3px; background: var(--lime); border: 1px solid var(--lime); color: #15170f; text-decoration: none; font-size: 12px; font-weight: 750; cursor: pointer; transition: transform .2s, background .2s; }
     .button:hover { transform: translateY(-2px); background: #e0fc92; }
     .button.ghost { background: transparent; border-color: var(--line); color: var(--ink); }
     .button.ghost:hover { background: var(--surface); }
-    .hero-meta { margin-top: 42px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; gap: 28px; color: var(--muted); font: 10px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
-    .hero-meta span::before { content: "↗"; color: var(--orange); margin-right: 8px; }
-    .visual { min-height: 430px; position: relative; display: grid; place-items: center; }
-    .visual-glow { position: absolute; width: 320px; height: 320px; border-radius: 50%; background: #d2f36b; filter: blur(110px); opacity: .09; }
-    .orbit { position: absolute; border: 1px solid rgba(210,243,107,.22); border-radius: 50%; width: 390px; height: 390px; transform: rotate(-21deg); }
-    .orbit::before { content: ""; position: absolute; inset: 25px; border: 1px solid var(--line); border-radius: 50%; }
-    .orbit::after { content: ""; position: absolute; inset: 52px; border: 1px dashed rgba(210,243,107,.16); border-radius: 50%; }
-    .orbit-dot { position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--orange); top: 31px; right: 79px; box-shadow: 0 0 16px #fa805499; }
-    .code-window { width: min(390px, 94%); position: relative; z-index: 1; background: #1b2019; border: 1px solid rgba(242,240,232,.2); box-shadow: 0 35px 90px #0008; transform: rotate(2deg); }
-    .window-bar { height: 38px; display: flex; align-items: center; gap: 6px; padding: 0 13px; border-bottom: 1px solid var(--line); }
-    .window-bar i { width: 7px; height: 7px; background: #53594d; border-radius: 50%; }
-    .window-bar i:first-child { background: var(--orange); }
-    .window-title { margin-left: auto; color: #818679; font: 9px var(--mono); }
-    .code { padding: 25px 25px 27px; font: 11px/2 var(--mono); color: #b5b9a9; }
-    .code .line { display: block; white-space: nowrap; }
-    .code .n { color: #8c9284; display: inline-block; width: 25px; }
-    .code .tag { color: var(--lime); }
-    .code .attr { color: #f7a27f; }
-    .code .value { color: #c6cead; }
-    .code .comment { color: #727b68; font-style: italic; }
-    .sticker { position: absolute; z-index: 2; right: 0; bottom: 24px; padding: 13px 16px; background: var(--orange); color: #22140e; font: 10px var(--mono); letter-spacing: .08em; text-transform: uppercase; transform: rotate(-4deg); box-shadow: 5px 6px 0 #0007; }
-    .section { padding: 95px 0; border-top: 1px solid var(--line); }
-    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 35px; margin-bottom: 40px; }
-    .kicker { color: var(--lime); font: 10px var(--mono); letter-spacing: .15em; text-transform: uppercase; margin: 0 0 15px; }
-    h2 { font: 400 clamp(38px, 5vw, 60px)/1.02 var(--serif); letter-spacing: -.05em; margin: 0; }
-    .heading-note { max-width: 355px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
-    .about { display: grid; grid-template-columns: 1fr .8fr; gap: 95px; align-items: start; }
-    .about-text { color: var(--muted); font-size: 15px; line-height: 1.95; margin: 0; max-width: 560px; }
-    .about-text strong { color: var(--ink); font-weight: 650; }
-    .facts { border-top: 1px solid var(--line); }
-    .fact { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 12px; }
-    .fact span:first-child { color: var(--muted); }
-    .fact span:last-child { text-align: right; }
-    .projects { background: #171a14; }
-    .project-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 17px; }
-    .project { min-height: 360px; background: var(--surface); border: 1px solid var(--line); position: relative; overflow: hidden; }
-    .project-main { display: grid; grid-template-columns: 1fr .88fr; }
-    .project-art { min-height: 360px; display: grid; place-items: center; background: #d2f36b; position: relative; overflow: hidden; }
-    .art-grid { position: absolute; inset: 0; opacity: .2; background-image: linear-gradient(#273019 1px, transparent 1px), linear-gradient(90deg, #273019 1px, transparent 1px); background-size: 32px 32px; mask-image: linear-gradient(135deg, black, transparent 84%); }
-    .browser-card { position: relative; z-index: 1; width: 74%; background: #151813; color: var(--ink); box-shadow: 12px 18px 0 rgba(30,40,16,.18); transform: rotate(-5deg); }
-    .browser-top { height: 22px; border-bottom: 1px solid #ffffff22; display: flex; align-items: center; gap: 4px; padding: 0 8px; }
-    .browser-top i { width: 4px; height: 4px; border-radius: 50%; background: #68705b; }
-    .browser-body { padding: 17px; }
-    .browser-label { font: 7px var(--mono); text-transform: uppercase; color: var(--lime); letter-spacing: .12em; }
-    .browser-line { display: block; height: 7px; width: 90%; margin-top: 9px; background: #e9ebdf; opacity: .8; }
-    .browser-line.short { width: 56%; opacity: .4; }
-    .browser-pill { margin-top: 15px; width: 47px; height: 12px; background: var(--orange); }
-    .project-info { align-self: center; padding: 35px; }
-    .project-type { color: var(--lime); font: 9px var(--mono); letter-spacing: .14em; text-transform: uppercase; }
-    h3 { margin: 13px 0; font: 400 30px var(--serif); letter-spacing: -.03em; }
-    .project-info p, .soon p { color: var(--muted); font-size: 12px; line-height: 1.8; }
-    .tags { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 22px; }
-    .tags span { border: 1px solid var(--line); border-radius: 99px; padding: 6px 9px; color: var(--muted); font: 9px var(--mono); }
-    .soon { display: flex; flex-direction: column; justify-content: space-between; padding: 29px; background: linear-gradient(150deg, #22271c, #191c16 70%); }
-    .soon-mark { color: var(--orange); font: 48px var(--serif); }
-    .soon h3 { font-size: 25px; }
-    .soon p { max-width: 250px; }
-    .contact-panel { background: #1b2018; border: 1px solid var(--line); padding: 54px 58px; position: relative; overflow: hidden; }
-    .contact-panel::after { content: ""; position: absolute; right: -90px; top: -180px; width: 350px; height: 350px; border: 1px solid rgba(210,243,107,.18); border-radius: 50%; box-shadow: 0 0 0 35px rgba(210,243,107,.025), 0 0 0 70px rgba(210,243,107,.02); pointer-events: none; }
-    .contact-intro { max-width: 560px; color: var(--muted); font-size: 13px; line-height: 1.8; }
-    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 30px; position: relative; z-index: 1; }
+    .hero-meta { margin-top: 39px; padding-top: 17px; border-top: 1px solid var(--line); display: flex; gap: 22px; flex-wrap: wrap; color: var(--muted); font: 9px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
+    .idea-panel { background: var(--surface); border: 1px solid var(--line); padding: 28px 30px 25px; }
+    .panel-label, .kicker { color: var(--lime); font: 10px var(--mono); letter-spacing: .15em; text-transform: uppercase; }
+    .panel-label { margin: 0 0 15px; }
+    .offer { display: grid; grid-template-columns: 38px 1fr; gap: 14px; align-items: start; padding: 19px 0; border-top: 1px solid var(--line); }
+    .offer-index { padding-top: 3px; color: var(--orange); font: 10px var(--mono); }
+    .offer h2 { margin: 0; font: 400 25px/1.1 var(--serif); letter-spacing: -.025em; }
+    .offer p { margin: 7px 0 0; max-width: 300px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+    .panel-note { margin: 8px 0 0; padding: 15px 16px; background: var(--surface-raised); color: var(--ink); font-size: 11px; line-height: 1.6; }
+    .panel-note span { color: var(--lime); }
+    .section { padding: 92px 0; border-top: 1px solid var(--line); }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 35px; margin-bottom: 38px; }
+    .kicker { margin: 0 0 14px; }
+    h2.section-title { margin: 0; font: 400 clamp(38px, 5vw, 60px)/1.02 var(--serif); letter-spacing: -.05em; }
+    .heading-note { max-width: 370px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .service-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .service-card { min-height: 245px; display: flex; flex-direction: column; align-items: flex-start; padding: 25px 27px 23px; background: var(--surface); border: 1px solid var(--line); transition: border-color .2s, transform .2s, background .2s; }
+    .service-card:hover { border-color: rgba(210,243,107,.65); background: #1c2018; transform: translateY(-3px); }
+    .service-top { width: 100%; display: flex; justify-content: space-between; color: var(--orange); font: 10px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+    .service-top span:last-child { color: var(--muted); }
+    .service-card h3 { margin: 27px 0 9px; font: 400 30px/1 var(--serif); letter-spacing: -.035em; }
+    .service-card p { max-width: 440px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .service-link { display: inline-flex; align-items: center; gap: 9px; margin-top: auto; padding-top: 19px; color: var(--lime); font-size: 11px; font-weight: 700; text-decoration: none; }
+    .service-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .process { background: #171a14; }
+    .process-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .step { padding: 23px 25px 25px 0; }
+    .step + .step { padding-left: 25px; border-left: 1px solid var(--line); }
+    .step-number { color: var(--orange); font: 10px var(--mono); letter-spacing: .1em; }
+    .step h3 { margin: 23px 0 8px; font: 400 25px var(--serif); }
+    .step p { max-width: 300px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
+    .about-name { color: var(--lime); font: 400 clamp(31px, 4.2vw, 48px)/1.08 var(--serif); letter-spacing: -.04em; }
+    .about-copy { max-width: 620px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.9; }
+    .about-copy strong { color: var(--ink); font-weight: 650; }
+    .contact-panel { background: var(--surface); border: 1px solid var(--line); padding: 50px 55px; }
+    .contact-intro { max-width: 570px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+    .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
     .field { display: grid; gap: 8px; }
     .field.full, .form-bottom { grid-column: 1/-1; }
     .field label { color: var(--muted); font-size: 11px; }
-    .field input, .field textarea { width: 100%; background: #12150f; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); outline: none; padding: 13px 14px; font: 12px var(--sans); }
-    .field input::placeholder, .field textarea::placeholder { color: #6f7568; }
-    .field input:focus, .field textarea:focus { border-color: var(--lime); }
-    .field textarea { min-height: 120px; resize: vertical; }
-    .form-bottom { display: flex; align-items: center; gap: 17px; flex-wrap: wrap; }
-    .form-status { max-width: 450px; color: var(--muted); font-size: 11px; line-height: 1.55; }
-    footer { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 15px; border-top: 1px solid var(--line); color: var(--muted); font: 9px var(--mono); letter-spacing: .04em; }
+    .field input, .field select, .field textarea { width: 100%; background: #12150f; border: 1px solid var(--line); border-radius: 3px; color: var(--ink); outline: none; padding: 13px 14px; font: 12px var(--sans); }
+    .field input::placeholder, .field textarea::placeholder { color: #777d70; }
+    .field select:invalid { color: #777d70; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--lime); }
+    .field textarea { min-height: 115px; resize: vertical; }
+    .form-bottom { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+    .form-status { max-width: 460px; color: var(--muted); font-size: 11px; line-height: 1.55; }
+    footer { min-height: 74px; display: flex; justify-content: space-between; align-items: center; gap: 15px; border-top: 1px solid var(--line); color: var(--muted); font: 9px var(--mono); letter-spacing: .04em; }
     @media (max-width: 820px) {
-      .shell { width: min(100% - 38px, 580px); }
-      .hero { grid-template-columns: 1fr; gap: 10px; padding-block: 68px 55px; }
-      .visual { min-height: 360px; }
-      .orbit { width: 315px; height: 315px; }
+      .shell { width: min(100% - 38px, 600px); }
+      .hero { grid-template-columns: 1fr; gap: 37px; padding-block: 65px 64px; }
+      .idea-panel { max-width: 560px; }
       .section { padding: 68px 0; }
       .section-heading { display: block; }
-      .heading-note { margin-top: 18px; }
-      .about { grid-template-columns: 1fr; gap: 35px; }
-      .project-grid { grid-template-columns: 1fr; }
-      .soon { min-height: 240px; }
+      .heading-note { margin-top: 16px; }
+      .about { grid-template-columns: 1fr; gap: 24px; }
     }
-    @media (max-width: 540px) {
+    @media (max-width: 560px) {
       .shell { width: calc(100% - 32px); }
       .topbar { height: 68px; }
-      .nameplate { max-width: 155px; line-height: 1.35; font-size: 10px; }
+      .nameplate { max-width: 152px; font-size: 9px; line-height: 1.4; }
       .nav { gap: 12px; }
       .nav a { font-size: 10px; }
       .nav .nav-cta { padding: 8px 10px; }
-      h1 { font-size: clamp(51px, 14vw, 70px); }
-      .hero { padding-top: 59px; }
-      .hero-meta { gap: 15px; font-size: 8px; flex-wrap: wrap; }
-      .visual { min-height: 305px; }
-      .orbit { width: 260px; height: 260px; }
-      .orbit::before { inset: 18px; }
-      .orbit::after { inset: 38px; }
-      .code-window { width: min(350px, 96%); }
-      .code { padding: 18px 15px; font-size: 9px; }
-      .sticker { right: -2px; bottom: 4px; }
-      .project-main { grid-template-columns: 1fr; }
-      .project-art { min-height: 240px; }
-      .project-info { padding: 28px 23px; }
-      .contact-panel { padding: 34px 22px; }
+      h1 { font-size: clamp(48px, 13vw, 68px); }
+      .hero { padding-top: 56px; }
+      .hero-meta { gap: 10px 17px; font-size: 8px; }
+      .idea-panel { padding: 23px 19px 20px; }
+      .offer { grid-template-columns: 30px 1fr; gap: 10px; }
+      .offer h2 { font-size: 23px; }
+      .service-grid, .process-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: 220px; padding: 22px; }
+      .step { padding: 22px 0; }
+      .step + .step { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .step h3 { margin-top: 15px; }
+      .contact-panel { padding: 32px 21px; }
       .contact-form { grid-template-columns: 1fr; }
       .field.full, .form-bottom { grid-column: auto; }
-      footer { align-items: start; justify-content: center; flex-direction: column; padding-block: 20px; }
+      footer { align-items: flex-start; justify-content: center; flex-direction: column; padding-block: 19px; }
     }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }
   </style>
@@ -159,92 +136,121 @@
 <body>
   <div class="shell">
     <header class="topbar">
-      <a class="nameplate" href="#inicio">MARTA NUBIA GALINDO GUZMÁN <span class="name-accent">/</span></a>
+      <a class="nameplate" href="#inicio">MARTA NUBIA GALINDO GUZMÁN <span class="slash">/</span></a>
       <nav class="nav" aria-label="Navegación principal">
-        <a href="#perfil">Perfil</a>
-        <a href="#proyectos">Proyectos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
         <a class="nav-cta" href="#contacto">Hablemos ↗</a>
       </nav>
     </header>
     <main>
       <section class="hero" id="inicio">
         <div>
-          <div class="eyebrow"><i></i> Portafolio personal · 2026</div>
-          <h1>Hola, soy<br><span class="accent">Marta Nubia.</span></h1>
-          <p class="hero-copy">Marta Nubia Galindo Guzmán. Me interesa el desarrollo de software y la creación de experiencias digitales claras. Este es el espacio donde presento mi perfil y los proyectos que forman parte de mi camino.</p>
+          <div class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> Desarrollo de ideas digitales</div>
+          <h1>¿Tienes una idea?<br><span class="accent">Hagámosla realidad.</span></h1>
+          <p class="hero-copy">Soy <strong>Marta Nubia Galindo Guzmán</strong> y puedo ayudarte a convertir tu idea en una página web, una aplicación móvil, un videojuego u otra solución digital.</p>
           <div class="hero-actions">
-            <a class="button" href="#proyectos">Ver proyectos <span aria-hidden="true">↘</span></a>
-            <a class="button ghost" href="#perfil">Conocer mi perfil</a>
+            <a class="button" href="#contacto">Cuéntame tu idea <span aria-hidden="true">↘</span></a>
+            <a class="button ghost" href="#servicios">Conoce mis servicios</a>
           </div>
-          <div class="hero-meta"><span>Desarrollo de software</span><span>Portafolio personal</span></div>
+          <div class="hero-meta"><span>Páginas web</span><span>Apps móviles</span><span>Videojuegos</span></div>
         </div>
-        <div class="visual" aria-label="Ilustración de código en un editor">
-          <div class="visual-glow"></div><div class="orbit"><i class="orbit-dot"></i></div>
-          <div class="code-window">
-            <div class="window-bar"><i></i><i></i><i></i><span class="window-title">portafolio.html</span></div>
-            <div class="code" aria-hidden="true">
-              <span class="line"><b class="n">01</b><span class="tag">&lt;main</span> <span class="attr">class</span>=<span class="value">"mi-historia"</span><span class="tag">&gt;</span></span>
-              <span class="line"><b class="n">02</b> &nbsp;<span class="tag">&lt;h1&gt;</span>Hola, soy Marta<span class="tag">&lt;/h1&gt;</span></span>
-              <span class="line"><b class="n">03</b> &nbsp;<span class="tag">&lt;p&gt;</span>Aprender, crear, compartir<span class="tag">&lt;/p&gt;</span></span>
-              <span class="line"><b class="n">04</b> &nbsp;<span class="comment">&lt;!-- ideas en construcción --&gt;</span></span>
-              <span class="line"><b class="n">05</b><span class="tag">&lt;/main&gt;</span><span class="cursor">▍</span></span>
-            </div>
-          </div>
-          <div class="sticker">Ideas → experiencias</div>
+        <aside class="idea-panel" aria-label="Servicios digitales">
+          <p class="panel-label">De la idea a una experiencia digital</p>
+          <div class="offer"><span class="offer-index">01</span><div><h2>Páginas web</h2><p>Una presencia digital para presentar tu negocio, servicio o proyecto.</p></div></div>
+          <div class="offer"><span class="offer-index">02</span><div><h2>Apps móviles</h2><p>Herramientas y experiencias útiles, pensadas para llevar en el celular.</p></div></div>
+          <div class="offer"><span class="offer-index">03</span><div><h2>Videojuegos</h2><p>Ideas interactivas para jugar, aprender y contar historias.</p></div></div>
+          <p class="panel-note"><span>¿Tienes otra idea?</span> Conversemos y pensemos cómo darle forma.</p>
+        </aside>
+      </section>
+      <section class="section" id="servicios">
+        <div class="section-heading">
+          <div><p class="kicker">01 / Lo que puedo crear contigo</p><h2 class="section-title">Soluciones para<br>ideas diferentes.</h2></div>
+          <p class="heading-note">Cada proyecto empieza por entender lo que necesitas. Estas son algunas maneras en las que puedo ayudarte.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-top"><span>01 — Web</span><span>Para tu proyecto</span></div>
+            <h3>Páginas web</h3>
+            <p>Desde una página informativa hasta un sitio para presentar tu negocio, servicio o marca con claridad.</p>
+            <a class="service-link" href="#contacto" data-service="Página web">Hablemos de tu página <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span>02 — Móvil</span><span>En tu bolsillo</span></div>
+            <h3>Aplicaciones móviles</h3>
+            <p>Una app puede ayudar a tus clientes, resolver una tarea o acercar una idea a las personas que la necesitan.</p>
+            <a class="service-link" href="#contacto" data-service="Aplicación móvil">Hablemos de tu app <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span>03 — Juego</span><span>Interactivo</span></div>
+            <h3>Videojuegos</h3>
+            <p>Podemos explorar una mecánica, un prototipo o un videojuego para entretener, enseñar o contar una historia.</p>
+            <a class="service-link" href="#contacto" data-service="Videojuego">Hablemos de tu juego <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-card">
+            <div class="service-top"><span>04 — A medida</span><span>Tu idea cuenta</span></div>
+            <h3>Otras soluciones digitales</h3>
+            <p>Si tienes en mente algo distinto, cuéntamelo. Juntas podemos definir qué necesitas y cómo empezar.</p>
+            <a class="service-link" href="#contacto" data-service="Otra idea digital">Cuéntame tu idea <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+      <section class="section process" id="proceso">
+        <div class="section-heading">
+          <div><p class="kicker">02 / Así podemos trabajar</p><h2 class="section-title">Un camino claro,<br>paso a paso.</h2></div>
+          <p class="heading-note">No necesitas tener todo resuelto antes de empezar. Podemos ir dando forma a la idea juntas.</p>
+        </div>
+        <div class="process-grid">
+          <article class="step"><span class="step-number">PASO 01</span><h3>Me cuentas</h3><p>Conversamos sobre tu idea, a quién va dirigida y qué te gustaría lograr.</p></article>
+          <article class="step"><span class="step-number">PASO 02</span><h3>La planeamos</h3><p>Definimos el alcance y organizamos las primeras decisiones del proyecto.</p></article>
+          <article class="step"><span class="step-number">PASO 03</span><h3>La construimos</h3><p>Avanzamos, revisamos los detalles y ajustamos la solución contigo.</p></article>
         </div>
       </section>
       <section class="section" id="perfil">
-        <div class="section-heading">
-          <div><p class="kicker">01 / Sobre mí</p><h2>La curiosidad<br>se vuelve proyecto.</h2></div>
-          <p class="heading-note">Un espacio personal para compartir intereses, proyectos y aprendizajes en desarrollo de software.</p>
-        </div>
         <div class="about">
-          <p class="about-text">Soy <strong>Marta Nubia Galindo Guzmán</strong>. Me interesa cómo la tecnología puede convertir una idea en algo útil y cercano para las personas. En este portafolio reúno mi perfil y las experiencias que iré sumando en mi camino en el desarrollo de software.</p>
-          <div class="facts" aria-label="Información del perfil"><div class="fact"><span>Interés</span><span>Desarrollo de software</span></div><div class="fact"><span>Enfoque</span><span>Aprendizaje práctico</span></div><div class="fact"><span>Este sitio</span><span>Portafolio personal</span></div></div>
-        </div>
-      </section>
-      <section class="section projects" id="proyectos">
-        <div class="section-heading">
-          <div><p class="kicker">02 / Selección</p><h2>Proyectos en proceso.</h2></div>
-          <p class="heading-note">Una selección inicial que crecerá con nuevas ideas, ejercicios y experiencias.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project project-main">
-            <div class="project-art" aria-hidden="true"><div class="art-grid"></div><div class="browser-card"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-body"><span class="browser-label">Marta Nubia · Portafolio</span><span class="browser-line"></span><span class="browser-line short"></span><span class="browser-pill"></span></div></div></div>
-            <div class="project-info"><span class="project-type">Proyecto personal · 01</span><h3>Portafolio web</h3><p>Un sitio personal para presentar mi perfil, compartir mi interés en el desarrollo de software y reunir proyectos en un solo lugar. Diseño adaptable con una interfaz propia.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive</span></div></div>
-          </article>
-          <article class="project soon"><div class="soon-mark" aria-hidden="true">✳</div><div><span class="project-type">Próximamente</span><h3>Una idea nueva.</h3><p>Aquí irá el próximo proyecto que quiera compartir.</p></div></article>
+          <div><p class="kicker">03 / Sobre mí</p><div class="about-name">Marta Nubia<br>Galindo Guzmán</div></div>
+          <p class="about-copy">Me gusta escuchar una idea, encontrar la forma más clara de convertirla en un proyecto digital y trabajar paso a paso para hacerla realidad. <strong>Si tienes un negocio, una iniciativa o una idea que quieres llevar a la web, al celular o al mundo de los videojuegos, puedo ayudarte a darle forma.</strong></p>
         </div>
       </section>
       <section class="section" id="contacto">
         <div class="contact-panel">
-          <p class="kicker">03 / Contacto</p><h2>¿Conversamos?</h2>
-          <p class="contact-intro">Si quieres saludar, compartir una oportunidad o conocer más de mi perfil, déjame un mensaje.</p>
+          <p class="kicker">04 / Empecemos</p><h2 class="section-title">Cuéntame qué quieres crear.</h2>
+          <p class="contact-intro">Describe tu idea y qué necesitas. Así podremos empezar a conversar sobre tu proyecto.</p>
           <form class="contact-form" id="contact-form">
             <div class="field"><label for="nombre">Tu nombre</label><input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="¿Cómo te llamas?" required></div>
             <div class="field"><label for="correo">Tu correo</label><input id="correo" name="correo" type="email" autocomplete="email" placeholder="nombre@correo.com" required></div>
-            <div class="field full"><label for="asunto">Asunto</label><input id="asunto" name="asunto" type="text" placeholder="Tema del mensaje" required></div>
-            <div class="field full"><label for="mensaje">Mensaje</label><textarea id="mensaje" name="mensaje" placeholder="Cuéntame un poco…" required></textarea></div>
+            <div class="field full"><label for="tipo-proyecto">¿Qué quieres crear?</label><select id="tipo-proyecto" name="tipo" required><option value="" disabled selected>Elige un tipo de proyecto</option><option>Página web</option><option>Aplicación móvil</option><option>Videojuego</option><option>Otra idea digital</option></select></div>
+            <div class="field full"><label for="mensaje">Cuéntame un poco más</label><textarea id="mensaje" name="mensaje" placeholder="¿Qué te gustaría lograr?" required></textarea></div>
             <div class="form-bottom"><button class="button" type="submit">Preparar mensaje <span aria-hidden="true">↗</span></button><span class="form-status" id="form-status" role="status" aria-live="polite"></span></div>
           </form>
         </div>
       </section>
     </main>
-    <footer><span>© 2026 Marta Nubia Galindo Guzmán</span><span>Portafolio de desarrollo de software</span></footer>
+    <footer><span>© 2026 Marta Nubia Galindo Guzmán</span><span>Ideas digitales, hechas realidad.</span></footer>
   </div>
   <script>
     const CONTACT_EMAIL = ""; // Añade aquí el correo destinatario cuando esté disponible.
     const contactForm = document.querySelector("#contact-form");
     const formStatus = document.querySelector("#form-status");
+    const projectType = document.querySelector("#tipo-proyecto");
+
+    document.querySelectorAll("[data-service]").forEach((link) => {
+      link.addEventListener("click", () => {
+        const service = link.dataset.service;
+        const option = Array.from(projectType.options).find((item) => item.text === service);
+        if (option) projectType.value = option.value || option.text;
+      });
+    });
+
     contactForm.addEventListener("submit", (event) => {
       event.preventDefault();
       if (!CONTACT_EMAIL) {
-        formStatus.textContent = "El formulario está diseñado. Para enviar mensajes, falta configurar un correo destinatario.";
+        formStatus.textContent = "El formulario está listo; falta configurar el correo que recibirá los mensajes.";
         return;
       }
       const data = new FormData(contactForm);
-      const subject = encodeURIComponent(data.get("asunto"));
-      const body = encodeURIComponent(`Nombre: ${data.get("nombre")}\nCorreo: ${data.get("correo")}\n\n${data.get("mensaje")}`);
+      const subject = encodeURIComponent(`Proyecto: ${data.get("tipo")}`);
+      const body = encodeURIComponent(`Nombre: ${data.get("nombre")}\nCorreo: ${data.get("correo")}\nTipo de proyecto: ${data.get("tipo")}\n\n${data.get("mensaje")}`);
       window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
       formStatus.textContent = "Se abrió tu aplicación de correo para terminar de enviar el mensaje.";
     });
